@@ -1,0 +1,9 @@
+
+You can use a distributed analytics framework like Map Reduce along with HDFS as storage
+1] Load the 10GB input file in HDFS
+2] HDFS will divide it into small size files and distribute it over cluster
+3] Write a Map function which will parse the file and save it as [key,value] pair, where phrase will be key and 1 will be value
+4] In the reduce phase we can sum up the count for each unique key such as phrase.
+5] In next map function we can swtich phrase to vale and it's count to key, this will help us to arrange our result in
+Ascending order
+6] And finally in reduce phase we can just write the result in HDFS or print it on console

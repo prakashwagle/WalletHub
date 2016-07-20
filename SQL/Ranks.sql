@@ -1,0 +1,1 @@
+Select count(b.votes)+1 as rank,a.name,a.votes from votes a left join votes b on a.votes < b.votes  group by a.name,a.votes order by votes DESC;
